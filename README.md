@@ -66,6 +66,7 @@ The system is designed with a **modular architecture**, separating responsibilit
 ### 🧩 Core Concepts Used
 
 * Object-Oriented Programming (OOP)
+* Files Separation (.cpp and .h)
 * Encapsulation & Abstraction
 * File Handling (`fstream`)
 * Data Serialization (custom format with separators)
