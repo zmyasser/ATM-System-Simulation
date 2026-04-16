@@ -32,7 +32,7 @@ void clsPerson::setEmail(const std::string& Email)
 	_Email = Email;
 }
 
-const std::string& clsPerson::getEmail()
+const std::string& clsPerson::getEmail() const
 {
 	return _Email;
 }
@@ -43,7 +43,7 @@ void clsPerson::setPhone(const std::string& Phone)
 	_Phone = Phone;
 }
 
-const std::string& clsPerson::getPhone()
+const std::string& clsPerson::getPhone() const
 {
 	return _Phone;
 }

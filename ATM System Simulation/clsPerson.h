@@ -36,13 +36,13 @@ public:
 
 
 	void setEmail(const std::string& Email);
-	const std::string& getEmail();
+	const std::string& getEmail() const;
 	_declspec(property(get = getEmail, put = setEmail)) std::string Email;
 
 
 
 	void setPhone(const std::string& Phone);
-	const std::string& getPhone();
+	const std::string& getPhone() const;
 	_declspec(property(get = getPhone, put = setPhone)) std::string Phone;
 
 };
