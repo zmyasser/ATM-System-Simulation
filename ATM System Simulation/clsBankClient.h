@@ -16,9 +16,9 @@ private:
 	double _AccountBalance = 0;
 	bool _MarkForDelete = false;
 
-	static clsBankClient _ConvertLineToClientObject(const std::string& Line, const std::string& Separator);
+	static clsBankClient _ConvertLineToClientObject(const std::string& Line, const std::string& Separator = "#//#");
 	
-	static std::string _ConvertClientObjectToLine(const clsBankClient& Client, const std::string& Separator);
+	static std::string _ConvertClientObjectToLine(const clsBankClient& Client, const std::string& Separator = "#//#");
 	
 	static std::vector <clsBankClient> _LoadClientDataFromFile();
 	
@@ -36,14 +36,14 @@ private:
 	
 	void _AddDataLineToFile(const std::string& DataLine);
 
-	std::string _PrepareTransferRecord(const clsBankClient& DestinationClient, double Amount, const std::string& UserName, const std::string& Separator);
+	std::string _PrepareTransferRecord(const clsBankClient& DestinationClient, double Amount, const std::string& UserName, const std::string& Separator = "#//#");
 	
 	void _TransferRegister(const clsBankClient& DestinationClient, double Amount, const std::string& UserName);
 	
 	struct stTransferRegisterRecord;
-	static stTransferRegisterRecord _ConvertTransferRegisterLineToRecord(const std::string& Line, const std::string& Separator);
+	static stTransferRegisterRecord _ConvertTransferRegisterLineToRecord(const std::string& Line, const std::string& Separator = "#//#");
 	
-	std::string _PrepareClientLoginLine(const std::string& Separator);
+	std::string _PrepareClientLoginLine(const std::string& Separator = "#//#");
 	
 
 public:

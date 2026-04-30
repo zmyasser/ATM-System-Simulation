@@ -8,13 +8,13 @@
 
 
 
-clsBankClient clsBankClient::_ConvertLineToClientObject(const std::string& Line, const std::string& Separator = "#//#")
+clsBankClient clsBankClient::_ConvertLineToClientObject(const std::string& Line, const std::string& Separator)
 {
 	std::vector <std::string> vClient = clsString::Split(Line, Separator);
 	return clsBankClient(enMode::enUpdate, vClient[0], vClient[1], vClient[2], vClient[3], vClient[4], clsUtility::DecryptText(vClient[5]), stod(vClient[6]));
 }
 
-std::string clsBankClient::_ConvertClientObjectToLine(const clsBankClient& Client, const std::string& Separator = "#//#")
+std::string clsBankClient::_ConvertClientObjectToLine(const clsBankClient& Client, const std::string& Separator)
 {
 	std::string Data = "";
 	clsBankClient tempClient = Client;
@@ -143,7 +143,7 @@ void clsBankClient::_AddDataLineToFile(const std::string& DataLine)
 }
 
 
-std::string clsBankClient::_PrepareTransferRecord(const clsBankClient& DestinationClient, double Amount, const std::string& UserName, const std::string& Separator = "#//#")
+std::string clsBankClient::_PrepareTransferRecord(const clsBankClient& DestinationClient, double Amount, const std::string& UserName, const std::string& Separator)
 {
 
 	std::string TransferRecord = "";
@@ -179,7 +179,7 @@ void clsBankClient::_TransferRegister(const clsBankClient& DestinationClient, do
 }
 
 
-clsBankClient::stTransferRegisterRecord clsBankClient::_ConvertTransferRegisterLineToRecord(const std::string& Line, const std::string& Separator = "#//#")
+clsBankClient::stTransferRegisterRecord clsBankClient::_ConvertTransferRegisterLineToRecord(const std::string& Line, const std::string& Separator)
 {
 	stTransferRegisterRecord TransferRegisterRecord;
 	std::vector <std::string> vTransferRegisterRecord = clsString::Split(Line, Separator);
@@ -195,7 +195,7 @@ clsBankClient::stTransferRegisterRecord clsBankClient::_ConvertTransferRegisterL
 	return TransferRegisterRecord;
 }
 
-std::string clsBankClient::_PrepareClientLoginLine(const std::string& Separator = "#//#")
+std::string clsBankClient::_PrepareClientLoginLine(const std::string& Separator)
 {
 
 	std::string LoginLine;
