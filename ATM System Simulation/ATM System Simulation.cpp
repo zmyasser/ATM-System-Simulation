@@ -1,6 +1,5 @@
 
 #include <iostream>
-#include "clsLoginApproved.h"
 #include "clsLoginScreen.h"
 
 int main()
