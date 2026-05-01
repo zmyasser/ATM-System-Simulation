@@ -1,9 +1,5 @@
 #include <iostream>
 #include "clsLoginScreen.h"
-#include "clsCurrentClient.h"
-#include "clsLoginApproved.h"
-#include "clsATM_MenuScreen.h"
-
 
 void clsLoginScreen::_Login()
 {

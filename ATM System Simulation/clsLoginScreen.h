@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
 #include "clsScreen.h"
+#include "clsCurrentClient.h"
+#include "clsLoginApproved.h"
+#include "clsATM_MenuScreen.h"
 
 class clsLoginScreen : clsScreen
 {
